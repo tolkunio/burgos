@@ -11,7 +11,9 @@
 body {
     font-family: var(--open-sans);
 }
-
+a{
+    text-decoration: none;
+}
 .container {
     width: 100%;
     max-width: 1182px;
@@ -21,6 +23,7 @@ body {
     padding-right: 15px;
 }
 
+/*header*/
 .header {
     display: flex;
     align-items: center;
@@ -45,7 +48,6 @@ body {
 
 .nav-link {
     color: var(--dark-color);
-    text-decoration: none;
     font-weight: 600;
     font-size: 20px;
 }
@@ -61,11 +63,11 @@ body {
     background-color: var(--ligh-accent-color);
 }
 .cart{
+    position: relative;
     display: flex;
     align-items: center;
     gap:10px;
     color: var(--dark-color);
-    text-decoration: none;
     font-weight: 700;
     font-size: 15px;
 }
@@ -79,6 +81,9 @@ body {
     background-size: contain;
 }
 .cart-count{
+    position: absolute;
+    bottom: 0;
+    left: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,5 +93,54 @@ body {
     background-color: var(--dark-accent-color);
     border-radius: 100%;
     font-size: 10px;
+}
+/*hero*/
+.hero{
+    background-image: url("../assets/images/hero-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding-top: 142px;
+    padding-bottom: 142px;
+}
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 16px;
+    font-size: 15px;
+    padding-left: 0;
+    color: rgba(255,255,255,.5);
+}
+.breadcrumbs-item{
+    position: relative;
+}
+.breadcrumbs-item:not(:last-child)::after{
+    content: '/';
+    position: absolute;
+    right: -12px;
+}
+.breadcrumbs-link{
+    color: rgba(255,255,255,.5);
 
+}
+.breadcrumbs-link:hover{
+    color:var(--ligh-accent-color)
+}
+.hero-title{
+    font-size:79px;
+    color:var(--light-color);
+    font-family: var(--nunito-sans);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.hero-desc{
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 400;
+    color:rgba(255,255,255, 0.8);
+    line-height: 160%;
 }
