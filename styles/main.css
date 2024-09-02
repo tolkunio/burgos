@@ -190,6 +190,7 @@ a{
 .banner-btn{
     display: block;
     cursor: pointer;
+    max-width: 170px;
     background-color: var(--ligh-accent-color);
     border-radius: 5px;
     color:var(--dark-color);
@@ -197,7 +198,7 @@ a{
     font-weight: 700;
     line-height: 18px;
     text-align: center;
-    padding: 20px 25px;
+    padding: 20px 0;
     border:none;
     text-transform: uppercase;
     transition: .2s;
@@ -482,4 +483,22 @@ a{
 
 .contact-tel:hover {
     color: var(--ligh-accent-color);
+}
+.button-up{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/icons/up-arrow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.button-up.hidden{
+    opacity: 0;
+}
+.button-up.visible{
+    opacity: 1;
 }
